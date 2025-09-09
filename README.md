@@ -4,16 +4,12 @@ A voice-activated AI assistant that responds to voice commands to perform variou
 
 Features
 Voice Activation: Responds to the wake phrase "wake up"
-
 Web Navigation: Opens Google, YouTube, Facebook, and LinkedIn
-
 Music Playback: Plays specific songs from YouTube based on voice commands
-
 News Updates: Fetches and reads the latest news headlines
-
 Extensible Architecture: Easy to add new commands and functionality
 
-Project Structure
+# Project Structure
 text
 ├── chat_gptCode.py      # Basic version with limited commands
 ├── client.py            # OpenAI API client setup (requires configuration)
@@ -21,37 +17,34 @@ text
 ├── musicLibrary.py      # Music database with YouTube links
 ├── Son_bot.py           # Enhanced version with YouTube search capability
 └── README.md            # This file
-Installation
+
+# Installation
 Clone this repository:
 
-bash
 git clone <your-repo-url>
 cd jarvis-ai-assistant
-Install required dependencies:
 
-bash
+# Install required dependencies:
+
 pip install speechrecognition webbrowser pyttsx3 requests
-For enhanced speech recognition (optional):
 
-bash
+# For enhanced speech recognition (optional):
+
 pip install pocketsphinx
 Configuration
-News API (optional):
 
+# 1 News API (optional):
 Get a free API key from NewsAPI.org
-
 Replace the newsapi variable in main.py with your key
 
-OpenAI Integration (optional):
-
+# 2 OpenAI Integration (optional):
 Set up your API key in client.py
-
 Uncomment and configure the OpenAI client for advanced AI responses
 
-Usage
+
+# Usage
 Run the main application:
 
-bash
 python main.py
 Wait for the "Initializing Jarvis..." message
 
@@ -80,7 +73,8 @@ music = {
     "song_name": "youtube_url",
     # ... more songs
 }
-Adding New Commands
+
+# Adding New Commands
 Extend the processCommand() function in main.py:
 
 python
@@ -93,13 +87,9 @@ Check internet connection for web features and speech recognition
 
 Adjust microphone sensitivity if having trouble with voice detection
 
-Dependencies
+# Dependencies
 speechrecognition
-
 pyttsx3
-
 webbrowser
-
 requests
-
 pocketsphinx (optional, for offline speech recognition)
